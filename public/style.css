@@ -1,0 +1,565 @@
+/* ==========================================================================
+   Clean 3D Scroll Frame Animation Showcase (Text-Free Canvas Focus)
+   Integrated with BATX Atelier Dark Theme
+   ========================================================================== */
+
+:root {
+  --bg-peach: #f2c0b0;
+  --bg-lavender: #c2b6dc;
+  --bg-blue: #98b4f0;
+  --surface-dark: #131315;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(14, 16, 24, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  background-color: #131315;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #131315;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Locked scroll during asset preloading */
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   Preloader Overlay
+   ========================================================================== */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #1b1d2a 0%, #0a0b10 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
+}
+
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  width: min(85%, 320px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #f7af9d;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f7af9d 0%, #a8c0ff 100%);
+  border-radius: 999px;
+  transition: width 0.15s ease-out;
+  box-shadow: 0 0 12px rgba(247, 175, 157, 0.8);
+}
+
+.loader-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Minimal Floating Top Bar HUD & Brand Mark
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(14, 16, 24, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: opacity 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.brand-badge-box {
+  padding: 4px 10px;
+  background: #2a2a2c;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.header-brand-group:hover .brand-badge-box {
+  background: #39393b;
+  transform: translateY(-1px);
+}
+
+.brand-sub-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c6c6cf;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #34d399;
+}
+
+.progress-pill {
+  color: #fff;
+  font-weight: 600;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: linear-gradient(135deg, #f7af9d 0%, #c494f4 100%);
+  color: #0b0c10;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.secondary-pill-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid var(--glass-border);
+}
+
+.secondary-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.top-scroll-progress {
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #f7af9d, #98b4f0);
+  transition: width 0.05s linear;
+}
+
+/* ==========================================================================
+   Hero 3D Scroll Section & Sticky Viewport (Zero Black Screen, Sticky Pin)
+   ========================================================================== */
+.scroll-hero-section {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.sticky-canvas-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e6bab1 0%, #d0b8d8 50%, #9bbeef 100%);
+  overflow: hidden;
+}
+
+.ambient-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+}
+
+#animation-canvas {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Seamless blend into the dark obsidian BATX theme below */
+.canvas-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(19, 19, 21, 0) 0%, rgba(19, 19, 21, 0.65) 60%, #131315 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Subtle scroll cue during animation */
+.scroll-cue {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.scroll-cue-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(14, 16, 24, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-cue-dot {
+  width: 6px;
+  height: 6px;
+  background: #f7af9d;
+  border-radius: 50%;
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 8px #f7af9d; }
+}
+
+.scroll-cue.faded {
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+}
+
+/* ==========================================================================
+   Product Content Sections Container (Directly Underneath)
+   ========================================================================== */
+.product-content-wrapper {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  background: #131315;
+}
+
+/* Gallery Thumbnail Button Active State */
+.thumb-btn {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.thumb-btn.active-thumb {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 8px 12px;
+  }
+  .status-pill.progress-pill {
+    display: none;
+  }
+  .brand-sub-tag {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Centered Hero Product Heading & Subheading (Fading Overlay 0% - 30%)
+   ========================================================================== */
+.hero-title-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Let canvas scroll events flow through */
+  padding: 20px;
+  will-change: opacity, transform;
+}
+
+.hero-title-inner {
+  text-align: center;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto; /* CTAs are interactive */
+}
+
+.hero-edition-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(14, 16, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f7af9d;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: #f7af9d;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #f7af9d;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.hero-product-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  text-shadow: 0 4px 32px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.hero-product-subheading {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 680px;
+  margin: 0 auto 30px auto;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
+}
+
+.hero-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-primary-btn {
+  background: #ffffff;
+  color: #131315;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+
+.hero-secondary-btn {
+  background: rgba(14, 16, 24, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Modals & Backdrop
+   ========================================================================== */
+.modal-backdrop {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-backdrop.hidden {
+  display: none !important;
+}
+
+.modal-backdrop:not(.hidden) {
+  display: flex !important;
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Toast Notification Animation */
+#toast-notification.show {
+  display: flex !important;
+  animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
