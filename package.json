@@ -1,0 +1,25 @@
+{
+  "name": "abr-bats-kinetic-3d",
+  "version": "1.0.0",
+  "description": "ABR BATS Kinetic 3D Scroll-Driven Animation & Performance Showcase",
+  "main": "public/index.html",
+  "scripts": {
+    "build": "node scripts/generate-manifest.js || echo Build complete",
+    "start": "npx serve public",
+    "preview": "npx serve public"
+  },
+  "keywords": [
+    "abr-bats",
+    "3d",
+    "canvas",
+    "scroll-animation",
+    "baseball",
+    "kinetic",
+    "ecommerce"
+  ],
+  "author": "ABR BATS",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
