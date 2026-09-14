@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary":"#332664","on-surface-variant":"#c5c7c9","on-primary-fixed":"#1a1c1d","surface-container":"#201f21","tertiary-container":"#e7deff","inverse-on-surface":"#303032","surface-variant":"#353437","on-primary-fixed-variant":"#454749","surface":"#131315","on-primary-container":"#636466","primary-fixed-dim":"#c6c6c8","on-error":"#690005","surface-bright":"#39393b","tertiary-fixed":"#e7deff","on-tertiary-fixed":"#1e0e4e","surface-dim":"#131315","primary-container":"#e2e2e4","primary-fixed":"#e2e2e4","inverse-surface":"#e5e1e4","on-error-container":"#ffdad6","on-secondary-container":"#b4b4bd","error":"#ffb4ab","surface-container-lowest":"#0e0e10","tertiary":"#ffffff","surface-tint":"#c6c6c8","background":"#131315","outline":"#8f9194","on-secondary-fixed":"#1a1b22","secondary-fixed-dim":"#c6c6cf","error-container":"#93000a","on-tertiary-fixed-variant":"#4a3d7c","on-background":"#e5e1e4","surface-container-highest":"#353437","secondary-fixed":"#e2e1eb","on-surface":"#e5e1e4","surface-container-high":"#2a2a2c","primary":"#ffffff","on-primary":"#2f3132","inverse-primary":"#5d5e60","surface-container-low":"#1b1b1d","tertiary-fixed-dim":"#ccbeff","outline-variant":"#44474a","secondary-container":"#45464e","on-secondary":"#2f3037","secondary":"#c6c6cf","on-tertiary-container":"#685b9c","on-secondary-fixed-variant":"#45464e"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xs":"0.5rem","margin-tablet":"2rem","space-lg":"2rem","gutter-mobile":"1rem","space-sm":"1rem","margin-desktop":"4rem","space-md":"1.5rem","space-xs":"0.75rem","gutter-desktop":"2.5rem","space-4xl":"8rem","gutter-tablet":"1.5rem","space-xl":"3rem","space-3xs":"0.25rem","margin-mobile":"1.25rem","space-2xl":"4rem","space-3xl":"6rem"},"fontFamily":{"display-hero-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Manrope"],"display-hero":["Space Grotesk"],"body-lg":["Manrope"],"spec-num":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Manrope"],"headline-xl":["Space Grotesk"],"label-caps":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"display-hero-mobile":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"display-hero":["72px",{"lineHeight":"80px","letterSpacing":"-0.04em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"spec-num":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-xl-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs group" data-path="home" href="#"><div class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-headline-md text-headline-md tracking-[0.25em] uppercase font-bold group-hover:bg-surface-bright transition-colors">BATX</div><span class="hidden lg:inline-block text-secondary font-label-caps text-label-caps uppercase border-l pl-2 ml-1">Skunkworks</span></a></div><nav class="hidden xl:flex items-center gap-space-md font-label-caps text-label-caps uppercase" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors py-2 text-primary font-semibold" data-path="home" href="#">Home</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="shop" href="#">Shop</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="features" href="#">Features</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="performance" href="#">Performance</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="reviews" href="#">Reviews</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="about" href="#">About</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-xs"><button aria-label="Search catalog" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><div class="hidden sm:flex items-center text-secondary font-label-caps text-label-caps px-space-xs py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px] mr-1">payments</span><span>USD $</span></div><button aria-label="Saved items" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span></button><button aria-label="Cart items" class="relative w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-caps text-[9px] flex items-center justify-center font-bold">0</span></button><div class="pl-2 flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABrFWT_Tp2YKywW8MWk-pJxALC56wtjHZySBHnEuuYQXxfGKRgF_EaVPbkkZ9-vF-79oHDaOJvp6RXC3CnCEoUqB81tCqGOeOEh4_nvWENLly5ZxOfE5WRIagDbckFR1KqFE3SRQ87P6cxx_S_DmOf_CwpuIRJCw6_k3WW3NwDcfk5ue9HjcL9m7f78wm4aSxQyRRj1b8e_ailog1pvcGvdNFhP9dbeL4wfar5VfNBbGi0sJm6rFwq"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Specular Gradient (Rose / Lavender / Sky Blue Bloom from Hero Bat) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-gradient-to-tr from-rose-500/10 via-purple-500/10 to-sky-400/10 blur-[130px] pointer-events-none rounded-full"></div>
+<!-- ========================================================================= -->
+<!-- 1. HERO SECTION                                                          -->
+<!-- ========================================================================= -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-lg lg:pt-space-2xl pb-space-3xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Hero Left Column -->
+<div class="lg:col-span-6 flex flex-col items-start z-10">
+<!-- Floating Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm mb-space-md">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-[0.18em]">★ Pro Performance Specification</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-hero text-display-hero uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-primary via-on-surface to-secondary mb-space-md">
+            BUILT TO PLAY.<br/>DESIGNED TO PERFORM.
+          </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl">
+            Premium performance meets modern design. Built for players who demand confidence, control, and consistency at every swing.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-2xl w-full sm:w-auto">
+<a class="h-12 px-8 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center shadow-[0_4px_24px_rgba(255,255,255,0.18)] hover:bg-primary-container transition-all hover:scale-[1.02] active:scale-[0.98]" href="#shop-section">
+              SHOP THE BAT
+            </a>
+<a class="h-12 px-7 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-2 transition-all" href="#features-section">
+<span>EXPLORE FEATURES</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Confidence Metrics -->
+<div class="pt-space-sm w-full">
+<div class="flex flex-wrap items-center gap-y-3 gap-x-6 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-amber-300 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface font-semibold">4.9 / 5</span>
+<span>Rating</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>Game Day Ready</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">precision_manufacturing</span>
+<span>Precision Engineered</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Right Column: Bat Visual -->
+<div class="lg:col-span-6 relative mt-space-xl lg:mt-0">
+<!-- Subtle chromatic radial glow behind bat -->
+<div class="absolute inset-0 bg-gradient-to-tr from-pink-500/15 via-purple-500/15 to-sky-500/15 blur-[90px] rounded-full transform -rotate-12 scale-90 pointer-events-none"></div>
+<div class="relative w-full aspect-square max-w-[580px] mx-auto rounded-3xl bg-surface-container-lowest/60 p-4 shadow-[0_24px_64px_rgba(0,0,0,0.65)] flex items-center justify-center group overflow-hidden">
+<img alt="BATX Black Pro Bat featured in luxury studio backdrop" class="w-full h-full object-cover rounded-2xl transform transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSMZyCtBDdfku-d4y-9KSU_GSS2gQt45ZtGxUB2FmQRjfY9jMvLlj_GAQU-TpLpAjzDKObtTfV4BU63UwzEMt5hYm1qRSRrDtEebZ_eUmKUWTTBf2rSpSWhXByLMq6URH3t4j-0X-76Z3STCVWm9UHnAiExJyGlEVhsNmNe5VsYNgH309ecx0S6RET8JugdxAHdOP2PiQ2BAa3x_BlLBDDq24mPDzdASMx-X7n8IHThMTkvk_7IrEyFpKPzM2HOCxtZQ"/>
+<!-- Dynamic Interactive Hotspots on the Bat -->
+<div class="absolute bottom-16 left-12 backdrop-blur-xl bg-surface-container-high/85 px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-3 pointer-events-auto transition-transform hover:-translate-y-1">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Pro Performance</p>
+<p class="font-body-sm text-[11px] text-secondary">Balanced Drop Ratio</p>
+</div>
+</div>
+<div class="absolute top-20 right-8 backdrop-blur-xl bg-surface-container-high/85 px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-3 pointer-events-auto transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Gloss Finished Alloy</p>
+<p class="font-body-sm text-[11px] text-secondary">Aero-Lacquered Carbon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Spec Telemetry Strip -->
+<div class="w-full bg-surface-container-low shadow-inner">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-tablet text-center md:text-left">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-1">Architecture</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Single-Piece Alloy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-1">Barrel Diameter</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">2 5/8" Pro Profile</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-1">Weight Ratio</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">-3 Balanced Drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-1">Certification</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">BBCOR .50 Certified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- 2. PRODUCT SHOWCASE ("THE BAT THAT STANDS OUT")                          -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl" id="features-section">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2">PRECISION ATTRIBUTES</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface tracking-tight max-w-2xl">
+          THE BAT THAT STANDS OUT
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-xs">
+          Crafted for unmatched plate discipline and acoustic feedback.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-tablet">
+<!-- Feature Card 1 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:-translate-y-1.5 shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">front_hand</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-2xs">Premium Grip</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Comfortable textured grip designed for confident handling and zero slip through rotation.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span>Ergonomic Wrap</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:-translate-y-1.5 shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-2xs">Balanced Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered for a smooth and controlled swing path, optimizing contact velocity effortlessly.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span>Even MOI Distribution</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:-translate-y-1.5 shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-2xs">Durable Construction</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Built for repeated high-impact training and elite game-day performance under all weather conditions.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span>Impact Tested</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature Card 4 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:-translate-y-1.5 shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-2xs">Premium Finish</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A sleek glossy black finish with metallic detailing and silver reflective logo inlays.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span>Obsidian Gloss</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 3. PRODUCT DETAIL / SHOP SECTION (High-converting PDP stage)               -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="shop-section">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left Column: Gallery Experience -->
+<div class="lg:col-span-7 space-y-space-md">
+<!-- Main Stage -->
+<div class="relative w-full aspect-square md:aspect-[4/3] rounded-3xl bg-surface-container-low overflow-hidden shadow-2xl flex items-center justify-center">
+<img alt="BATX Black Pro Bat Full Specimen" class="w-full h-full object-cover transition-all duration-500 hover:scale-105 cursor-zoom-in" id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIR9S9OVuYXmj2j-54lBPv_0owwb8JUGiPyuJI3Y7AxkwAfdb5nVBhtmvaaWRxiIE5FSODr1Dn0SnKIBj6lOV64CjWyJhmdyLi2UN_Fnu0wByE-1c5-uFvcc7ahifGm3opTirDazHMfNBx_FaVyeimLv2dofF-2zfWcBdqUuyCiyiSHxK0Sa5pJRKHLFEXaivt8rg7pZ1k78NZTNduUaqkdXn-FKRogWNU7NczPE57fk0u4pSAv6izZBo3tkx6P4WnVA"/>
+<div class="absolute top-4 left-4 backdrop-blur-md bg-surface/80 px-3 py-1.5 rounded-full">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">360</span> Interactive Visual
+                </span>
+</div>
+<div class="absolute bottom-4 right-4 backdrop-blur-md bg-surface/80 px-3 py-1.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">aspect_ratio</span>
+<span class="font-body-sm text-body-sm text-on-surface">Click image to inspect detail</span>
+</div>
+</div>
+<!-- Thumbnails Selector -->
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container p-1 text-left transition-all hover:ring-2 hover:ring-primary focus:outline-none ring-2 ring-primary" type="button">
+<img alt="BATX Bat Full View" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBDVGuiFOWCFACOS-fGpWVHb2RnoJaFICHVVUjJ61g_qe9H8DZSOx1B1VUcLElVW_KcHB9sTGWIVkphZKj0m6fwChwTX__e5gYEYYl1rp_gILZPfhsa-blubD8cG7aPuwhjJqBs4MyF0MgUt545r9Gy9tUc_M_qxzUVhjXzIV5qO3QOMbkj8x-MU8ErgCXzrvWc_C0rSg8JVbwXM1ENncx8zlryWikVat4Qk3ee1Byi3U1Et1_ymtAcUZyonDdQXwhdw"/>
+<span class="absolute bottom-2 left-2 bg-surface/85 px-2 py-0.5 rounded text-[10px] font-label-caps text-on-surface uppercase">Full Bat</span>
+</button>
+<button class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container p-1 text-left transition-all hover:ring-2 hover:ring-primary focus:outline-none" type="button">
+<img alt="BATX Bat Handle &amp; Grip" class="w-full h-full object-cover rounded-lg object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS0M4PzuYT1aT3Voauho2pNvVkwzCMq28lGeGBecFD1DYlJntpjpYJ8NUkNcPFepzhLbp1Nf575mg4PeZTgOgPSFWO6KsROELTGGOKRS-PM01eRWG7_wgcPAVlVhrVHfACDXyTViFEUBQEDLu1stwGZhgVb5JxJcX1DcropkvzoVm1mzGOxtggs8oyaPUvXXAm4jZIs8zt3FP5ZcPIBC0UQwbY8nWxoAAiefNi2xW7LQvf1DcFjmUzKPT1pxctOM91Ew"/>
+<span class="absolute bottom-2 left-2 bg-surface/85 px-2 py-0.5 rounded text-[10px] font-label-caps text-on-surface uppercase">Grip Detail</span>
+</button>
+<button class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container p-1 text-left transition-all hover:ring-2 hover:ring-primary focus:outline-none" type="button">
+<img alt="BATX Bat Barrel Logo" class="w-full h-full object-cover rounded-lg object-bottom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDy0NBGZ1uhJmVSe5ukJqtUqxzW5FCgTuW_xf_rMowKv7pYLalcB4odumJCPHWS2MIk0J0snmyC3hmD5C_CoUbpUHjPBc65rOLQs_u9tPGZJDnpU5YgHklslwDEGIrj3v0-X1bZ-b_kw0jtCtx6BeYVqALQUgucf-C6nbIC3OAn1WMlz-bKUFQMyRYvRbd8Lh1_lO4n8bep2fys2gZeD2ZuC6DABjm7v_TnDpUSrQljsWXrtCvvdVmU5WLi1zqIpCsow"/>
+<span class="absolute bottom-2 left-2 bg-surface/85 px-2 py-0.5 rounded text-[10px] font-label-caps text-on-surface uppercase">Barrel Typography</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Purchasing Module -->
+<div class="lg:col-span-5 flex flex-col p-space-lg rounded-3xl bg-surface-container-low shadow-xl">
+<!-- Badge & Rating -->
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">SERIES 01 // LIMITED RUN</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-300 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps font-bold text-on-surface">4.9 / 5</span>
+<span class="font-body-sm text-body-sm text-outline">(128 Reviews)</span>
+</div>
+</div>
+<!-- Title & Price -->
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface font-bold tracking-tight mb-space-2xs">
+              BATX Black Pro Bat
+            </h2>
+<div class="flex items-baseline gap-3 mb-space-md">
+<span class="font-display-hero text-headline-xl text-primary font-bold">$129.00</span>
+<span class="font-label-caps text-label-caps uppercase text-emerald-400 font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span> In Stock — Ready to Ship
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Precision-forged obsidian black alloy designed with an optimized barrel profile for explosive sweet spot contact and zero sting feedback.
+            </p>
+<!-- Customizer Controls -->
+<div class="space-y-space-md pt-space-xs mb-space-lg">
+<!-- Size Selection -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Choose Length / Size</span>
+<a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors underline" href="#features-section">Size Spec Chart</a>
+</div>
+<div class="grid grid-cols-4 gap-2" id="size-selector-group">
+<button class="size-btn py-2.5 rounded-xl bg-surface-container font-label-caps text-label-caps uppercase text-secondary hover:text-on-surface hover:bg-surface-bright transition-all" data-size="31" type="button">31"</button>
+<button class="size-btn py-2.5 rounded-xl bg-surface-container font-label-caps text-label-caps uppercase text-secondary hover:text-on-surface hover:bg-surface-bright transition-all" data-size="32" type="button">32"</button>
+<button class="size-btn py-2.5 rounded-xl bg-primary text-on-primary font-label-caps text-label-caps uppercase font-bold shadow-md ring-1 ring-primary transition-all" data-size="33" type="button">33"</button>
+<button class="size-btn py-2.5 rounded-xl bg-surface-container font-label-caps text-label-caps uppercase text-secondary hover:text-on-surface hover:bg-surface-bright transition-all" data-size="34" type="button">34"</button>
+</div>
+</div>
+<!-- Grip Selection -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Grip Profile</span>
+<span class="font-body-sm text-body-sm text-secondary" id="selected-grip-name">Textured Black (0.5mm)</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="grip-btn py-2.5 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase text-center transition-colors active-grip ring-1 ring-primary" type="button">Textured Black</button>
+<button class="grip-btn py-2.5 px-3 rounded-xl bg-surface-container text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase text-center transition-colors" type="button">Matte Stealth</button>
+<button class="grip-btn py-2.5 px-3 rounded-xl bg-surface-container text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase text-center transition-colors" type="button">Pro Wrap</button>
+</div>
+</div>
+<!-- Quantity & Add to Cart -->
+<div class="pt-space-xs flex items-center gap-3">
+<div class="flex items-center rounded-xl bg-surface-container p-1 h-12">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-bright rounded-lg transition-colors" id="qty-minus" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-label-caps text-label-caps font-bold text-on-surface" id="qty-val">1</span>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-bright rounded-lg transition-colors" id="qty-plus" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-label-caps text-label-caps font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary-container shadow-[0_4px_20px_rgba(255,255,255,0.18)] transition-all hover:scale-[1.01] active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Add To Cart</span>
+</button>
+</div>
+<!-- Express Buy Now -->
+<button class="w-full h-12 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-caps text-label-caps uppercase font-bold tracking-wider flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Buy Now with Express Checkout</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="pt-space-md border-t border-surface-variant/40 space-y-2.5">
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span>
+<span>Free shipping on all orders over $100</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span>Secure 256-bit encrypted checkout guarantee</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">replay</span>
+<span>30-day hassle-free returns and performance warranty</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. PERFORMANCE SECTION ("ENGINEERED FOR CONFIDENCE")                       -->
+<!-- ========================================================================= -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl">
+<!-- Glow Underlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-purple-500/10 via-rose-500/10 to-sky-500/10 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2">BALLISTIC DYNAMICS</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface tracking-tight max-w-2xl">
+          ENGINEERED FOR CONFIDENCE
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+          Every detail is designed to deliver a premium experience—from the textured grip to the sleek barrel and polished finish.
+        </p>
+</div>
+<!-- Hero Visual Showcase Centerpiece -->
+<div class="relative z-10 mb-space-2xl rounded-3xl bg-surface-container-low overflow-hidden shadow-2xl p-4 md:p-8">
+<div class="relative w-full aspect-[21/9] min-h-[340px] rounded-2xl overflow-hidden flex items-center justify-center">
+<img alt="BATX Studio Showcase Engineered Performance" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuBU4Uj9lFzRMlJu1eQtThv_K69HOKUFCCM5Eiq5g3UaNk31sR36zMNffoPVH1WSI_kYpSSvQA12NaXDg15TvEWainBmGNsk61OE-KdardF6Im44JGnVuBUF1VpvNFg8AWEN80HmV6NRY8gKHZetY3msnAH--DaYkOhcmtsQ_TPQBj3hpk_qNFqviDbasALjb03pNC6Nnhlztk9fXOhGSIP5b6dAlbjP35mLzaZwjnFsjPEuzthVooMEeR2CQbelZIhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-md">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-1">Aero-Craftsmanship</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface font-bold">Uncompromising Balance Ratio</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Calibrated weight distribution for rapid barrel recovery across the entire strike zone.</p>
+</div>
+</div>
+</div>
+<!-- Three Visual Pillar Metric Cards -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-gutter-tablet">
+<!-- Pillar 1: Control -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider mb-space-2xs">Control</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Optimized mass distribution for effortless bat speed and responsive barrel path control. Swing through velocity without sacrificing apex leverage.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-variant/30 flex items-center justify-between text-secondary">
+<span class="font-label-caps text-label-caps uppercase">Swing Weight Index</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Optimized Balanced</span>
+</div>
+</div>
+<!-- Pillar 2: Comfort -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">vibration</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider mb-space-2xs">Comfort</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Textured anti-vibration grip tape engineered to reduce hand fatigue through high-velocity contact, protecting the hands during chilly morning practice.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-variant/30 flex items-center justify-between text-secondary">
+<span class="font-label-caps text-label-caps uppercase">Harmonic Dampening</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Multi-Layer Gel</span>
+</div>
+</div>
+<!-- Pillar 3: Confidence -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider mb-space-2xs">Confidence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Acoustic resonance and structural rigidity designed to command every pitch. Feel unmistakable tactile feedback the moment contact is made.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-variant/30 flex items-center justify-between text-secondary">
+<span class="font-label-caps text-label-caps uppercase">Acoustic Signature</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Deep Crack Sound</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. FEATURE VISUALS (Editorial Trio)                                       -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-3xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col items-start mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2">ANATOMY OF PRECISION</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface tracking-tight">
+            DISSECTED EXCELLENCE
+          </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-tablet">
+<!-- Card 1: Grip Focus -->
+<div class="rounded-2xl bg-surface-container-low overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300">
+<div class="h-72 w-full overflow-hidden relative">
+<img alt="BATX Bat Handle and Textured Ergonomic Grip" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ilNPpTQw8IVrEDHUUWzyjS2EnDNr1tahjxRPG56iySKtisvFDSmez90lRA4uJpxyMDFRu0G8nWKl5XuRIYbBUGazjqSRq6Zpr4C4Molr1j1JC-DxoM9MOp9hLIcf1sga8E9EoAVLf9oDlLdfLtqBpM5sTru1mY1aS2erRN2TUwsSDzjBuyzKJLKdgB6V_Q9sAjWNoqzp2-1uFnAzjGCY2cFYI8XtG05VezzuhT9ibsm8mu8lXYQpNzv09ZvJSji-_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-1">CRAFT 01</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface font-bold mb-2">Premium Grip</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Focus on the textured ergonomic wrap. Hex-perforated micro-tacky composite prevents hand twist and ensures supreme wrist snap through impact.
+              </p>
+</div>
+</div>
+<!-- Card 2: Barrel Focus -->
+<div class="rounded-2xl bg-surface-container-low overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300">
+<div class="h-72 w-full overflow-hidden relative">
+<img alt="BATX Sleek Barrel with Signature BAT Typography" class="w-full h-full object-cover object-bottom transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafkZQEeIDSCBEJ72Jw_r-E0g71HYVtIPJa9xqAMqkic6bQPpqpBv_K94JLh47kyLaLm5q_cRQYFShMK40r6h_Z3s0pCKDk7tqd_R951N71RL_zLR_PMQ4OFmXFeUPe09Bl1xtxq_grltDVWTwbWEvJsWo1_-SDybsFldT8K6IvVHn4-BVvp3YILfOxd_WG_3gWLF2CichqFLrJCD7d5x8rxs8h4_puOPZo9RzigsxYEh6ee54KlqqnoBfI2FzbbQevw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-1">CRAFT 02</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface font-bold mb-2">Sleek Barrel</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Highlighting the aerodynamic taper and signature BAT metallic typography. Extruded wall thickness promotes maximum compression without dead zones.
+              </p>
+</div>
+</div>
+<!-- Card 3: Signature Finish -->
+<div class="rounded-2xl bg-surface-container-low overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300">
+<div class="h-72 w-full overflow-hidden relative">
+<img alt="BATX Signature Mirror Gloss Black Finish and End Cap" class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYKTtfgrkB_4XqGqkNl5uNcC7iJxH9bMnEudEK3N_DX3HWSAcCihckselP-ScuGchQnfpcqqUwlQjlbPUTaHVMOlarpO9q65DVj64Kwax4zrF7_7zF2qGJhoxju0nOMVIda-BxXKsi0nElFIDuxRtlYqM9Bbx5268hCi6Vw3TX3R9QEFD7__If_Nhy6Qj3LKl_WGAjZMCnCZI8O6riIkHnwhxhNU-1ebjwdsGZSSKTPOAIgE9afhXg9yH936pp0IxM1Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-1">CRAFT 03</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface font-bold mb-2">Signature Finish</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Highlighting the mirror gloss black polish and silver metallic end cap. Ultraviolet cured clear coat defends against ball scuffs and field abrasions.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. REVIEWS ("LOVED BY PLAYERS")                                           -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2 block">ATHLETE EXPERIENCES</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface tracking-tight">
+            LOVED BY PLAYERS
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">
+            Verified feedback from collegiate athletes, coaches, and players.
+          </p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low px-6 py-3.5 rounded-2xl shadow-sm">
+<div class="text-right">
+<div class="flex items-center gap-1 text-amber-300">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary">Based on 128 Reviews</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-primary border-l border-surface-variant pl-4">
+            4.9
+          </div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-tablet mb-space-lg">
+<!-- Review 1 -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-1 text-amber-300 mb-space-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-space-md italic">
+              "Looks incredible and feels premium in hand."
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              The sweet spot feedback is pure electricity. Transitioning to this bat helped tighten up my bat speed on inside fastballs immediately.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase font-bold">Marcus R.</p>
+<p class="font-body-sm text-body-sm text-secondary">Collegiate Player</p>
+</div>
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">verified</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-1 text-amber-300 mb-space-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-space-md italic">
+              "Beautiful finish and excellent grip."
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Ordered 4 for my varsity hitters. The durability through 45+ games this season has been outstanding. Finish doesn't peel or chip.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase font-bold">Daniel K.</p>
+<p class="font-body-sm text-body-sm text-secondary">Travel League Coach</p>
+</div>
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">verified</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="rounded-2xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-1 text-amber-300 mb-space-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-space-md italic">
+              "One of the best-looking bats in my collection."
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every guy in the dugout asks to swing it. The acoustic ring on solid contact turns heads every single at-bat.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase font-bold">Jason M.</p>
+<p class="font-body-sm text-body-sm text-secondary">Adult Rec League</p>
+</div>
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Demonstration disclaimer -->
+<div class="text-center">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          Sample demo player reviews for demonstration prototype.
+        </span>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. BRAND STORY ("MORE THAN A BAT.")                                       -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-3xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-6 relative">
+<div class="relative w-full aspect-square rounded-3xl overflow-hidden bg-surface-container-low shadow-2xl">
+<img alt="BATX Studio Brand Story Artwork" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw7uk5V5nMEGmsCi8yX1m53FXaouwpLWfve0Ie-fMogCTpubuDymRFsAaC_WyS-Vmb5ucQXXAa7j1-iJp7SMXTTtXvvYtcSTjBzi38INi-UDWJZS48mPOau53WWqj5DlAAis-tM9GTqrrD3DqE0s-cCIkGrVhb7h0xojY9QxluBHZpOEz4edA31aQGjoCBdw097cror27rbVFArWoHF0w95oC0qaFKLDHNKh9njIooyrWzYVpccZe9I0VOLgBtYLS3pA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-surface-container/90 backdrop-blur-md">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-1">Skunkworks Precision</span>
+<p class="font-body-sm text-body-sm text-on-surface">Designed and tested inside aerospace-grade testing tunnels for minimal drag friction.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col items-start lg:pl-space-md">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2">ORIGIN &amp; PHILOSOPHY</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface tracking-tight mb-space-md">
+              MORE THAN A BAT.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-md">
+              BATX represents the meeting point of performance, confidence, and modern sports design. We create equipment that looks as powerful as it feels.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-xl">
+              Too much baseball equipment still looks like it was engineered in the 1990s. We discarded the excessive neon decals and gimmicky alloys in favor of aerodynamic minimalism, obsidian carbon reflection, and acoustic clarity that demands attention.
+            </p>
+<!-- Brand Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm w-full pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">design_services</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface font-bold">Design Integrity</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Sleek obsidian lines.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface font-bold">Pure Balance</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Effortless barrel drop.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface font-bold">Athletic Craft</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Game-tested alloy.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 8. FINAL CTA ("READY FOR YOUR NEXT SWING?")                               -->
+<!-- ========================================================================= -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl mb-space-2xl">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-low shadow-2xl p-space-lg md:p-space-3xl flex flex-col items-center text-center">
+<!-- Ambient radial glow inside banner -->
+<div class="absolute inset-0 bg-gradient-to-r from-rose-500/10 via-purple-500/10 to-sky-500/10 blur-[80px] pointer-events-none"></div>
+<div class="relative z-10 max-w-xl flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-high p-2 mb-space-md shadow-inner flex items-center justify-center">
+<img alt="BATX Miniature" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0lq0MCrhLbrHiNkk2cvDFPwvn3wb9hZmSb1kYrLTIhhqVQ6cCAVCIj9bt90IpG2_QP6CjEovH73Cch7QZIBxZpC8TIipocYHJhGwmxPfYzC_H8t04PVlq5pSuipGcb_K3bX8mx0pIpuGaq9qAtNrUFO0TOkVqueAzf2T65nzn9NnOkMdfIjyQVqQXDknEkmXtBUDEaEacBT8E-DAaaLjx5-0ktlRVQ3g69UAKHD_JM89l0-5IFWMWk96TXG6TSF40lQ"/>
+</div>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary mb-2">ELEVATE YOUR GAME</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-on-surface font-bold tracking-tight mb-space-xs">
+            READY FOR YOUR NEXT SWING?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-xl">
+            Upgrade your game-day setup with the BATX Black Pro Bat. Hand-calibrated, game-ready, and shipped straight to your doorstep.
+          </p>
+<a class="h-14 px-10 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider font-bold flex items-center justify-center gap-3 shadow-[0_8px_32px_rgba(255,255,255,0.22)] hover:bg-primary-container transition-all hover:scale-105 active:scale-95" href="#shop-section">
+<span>SHOP NOW</span>
+<span class="text-on-primary-fixed-variant font-medium">|</span>
+<span>$129.00 — Instant Dispatch</span>
+</a>
+<div class="mt-space-md flex items-center gap-6 text-secondary font-label-caps text-label-caps uppercase">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">check</span> Free Express Delivery</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">check</span> 30-Day Money Back</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Interactive PDP size selection
+  document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.size-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-md', 'ring-1', 'ring-primary');
+        b.classList.add('bg-surface-container', 'text-secondary');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-md', 'ring-1', 'ring-primary');
+      btn.classList.remove('bg-surface-container', 'text-secondary');
+    });
+  });
+
+  // Grip profile selector
+  const gripBtns = document.querySelectorAll('.grip-btn');
+  const selectedGripName = document.getElementById('selected-grip-name');
+  gripBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      gripBtns.forEach(b => {
+        b.classList.remove('bg-surface-container-high', 'text-on-surface', 'ring-1', 'ring-primary');
+        b.classList.add('bg-surface-container', 'text-secondary');
+      });
+      btn.classList.add('bg-surface-container-high', 'text-on-surface', 'ring-1', 'ring-primary');
+      btn.classList.remove('bg-surface-container', 'text-secondary');
+      if (selectedGripName) {
+        selectedGripName.textContent = btn.textContent.trim() + ' (Custom)';
+      }
+    });
+  });
+
+  // Quantity Counter
+  const qtyMinus = document.getElementById('qty-minus');
+  const qtyPlus = document.getElementById('qty-plus');
+  const qtyVal = document.getElementById('qty-val');
+  let currentQty = 1;
+
+  if (qtyMinus && qtyPlus && qtyVal) {
+    qtyMinus.addEventListener('click', () => {
+      if (currentQty > 1) {
+        currentQty--;
+        qtyVal.textContent = currentQty;
+      }
+    });
+    qtyPlus.addEventListener('click', () => {
+      if (currentQty < 10) {
+        currentQty++;
+        qtyVal.textContent = currentQty;
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-space-3xl"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mb-space-2xl"><div class="lg:col-span-4 space-y-space-md"><div class="font-headline-lg text-headline-lg text-primary tracking-[0.2em] font-bold uppercase">BATX</div><p class="font-body-lg text-body-lg text-on-surface max-w-sm">Performance. Confidence. Modern athletic luxury.</p><div class="pt-space-xs"><div class="font-label-caps text-label-caps uppercase text-secondary mb-2">Concierge Dispatch</div><div class="flex items-center max-w-md"><input class="flex-1 h-12 bg-surface-container-low px-4 text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-l-xl focus:outline-none focus:bg-surface-container" placeholder="Enter your private email" type="email"/><button class="h-12 px-6 bg-primary text-on-primary font-label-caps text-label-caps font-bold uppercase rounded-r-xl hover:bg-primary-container transition-colors" type="button">JOIN</button></div></div></div><div class="lg:col-span-2 space-y-space-xs"><h4 class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Shop</h4><ul class="space-y-space-2xs font-body-sm text-body-sm"><li class="hover:text-on-surface transition-colors"><a data-path="shop" href="#">BATX Black Pro Bat</a></li><li class="hover:text-on-surface transition-colors"><a data-path="shop" href="#">Accessories</a></li><li class="hover:text-on-surface transition-colors"><a data-path="shop" href="#">Limited Editions</a></li><li class="hover:text-on-surface transition-colors"><a data-path="shop" href="#">Gift Cards</a></li></ul></div><div class="lg:col-span-2 space-y-space-xs"><h4 class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Innovation &amp; Craft</h4><ul class="space-y-space-2xs font-body-sm text-body-sm"><li class="hover:text-on-surface transition-colors"><a data-path="performance" href="#">Balanced Design</a></li><li class="hover:text-on-surface transition-colors"><a data-path="features" href="#">Grip Tech</a></li><li class="hover:text-on-surface transition-colors"><a data-path="features" href="#">Barrel Finish</a></li><li class="hover:text-on-surface transition-colors"><a data-path="performance" href="#">Durability Standards</a></li></ul></div><div class="lg:col-span-2 space-y-space-xs"><h4 class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Customer Service</h4><ul class="space-y-space-2xs font-body-sm text-body-sm"><li class="hover:text-on-surface transition-colors"><a data-path="contact" href="#">Shipping &amp; Returns</a></li><li class="hover:text-on-surface transition-colors"><a data-path="features" href="#">Size Guide</a></li><li class="hover:text-on-surface transition-colors"><a data-path="contact" href="#">Order Tracking</a></li><li class="hover:text-on-surface transition-colors"><a data-path="contact" href="#">Contact Concierge</a></li></ul></div><div class="lg:col-span-2 space-y-space-xs"><h4 class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Legal &amp; Social</h4><ul class="space-y-space-2xs font-body-sm text-body-sm"><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">Privacy Policy</a></li><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">Terms of Service</a></li><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">Instagram</a></li><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">TikTok</a></li><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">YouTube</a></li><li class="hover:text-on-surface transition-colors"><a data-path="about" href="#">X (Twitter)</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-outline"><p>© 2026 BATX Sports Performance LLC. Prototype demonstration.</p><p class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Aero-Carbon Composite Lab • Edition 01</p></div></div></footer></body></html>
